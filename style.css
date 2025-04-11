@@ -1,0 +1,198 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Blurred background image */
+  .navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('bg.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+    z-index: -2;
+  }
+  
+  /* Black overlay */
+  .navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  
+  /* Netflix logo */
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    z-index: 2;
+  }
+  
+  /* Sign In Button */
+  .signin-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-box:hover {
+    background-color: #f6121d;
+  }
+  
+  /* Main Heading */
+  .center-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    padding: 0 20px;
+  }
+  
+  /* Sub Text */
+  .sub-text {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    z-index: 1;
+    color: white;
+  }
+  
+  /* Email Section */
+  .email-section {
+    margin-top: 20px;
+    z-index: 1;
+  }
+  
+  .email-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Email Form */
+  .email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .email-input {
+    padding: 15px;
+    width: 300px;
+    max-width: 80%;
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+  }
+  
+  .get-started-btn {
+    padding: 15px 25px;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #f6121d;
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 768px) {
+    .center-text {
+      font-size: 2rem;
+    }
+  
+    .sub-text {
+      font-size: 1.2rem;
+    }
+  
+    .email-input {
+      width: 90%;
+      font-size: 14px;
+    }
+  
+    .get-started-btn {
+      width: 90%;
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .email-form {
+      flex-direction: column;
+    }
+  
+    .logo {
+      width: 100px;
+    }
+  
+    .signin-box {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-text {
+      font-size: 1.7rem;
+    }
+  
+    .sub-text {
+      font-size: 1rem;
+    }
+  
+    .email-section p {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+  
+    .email-input,
+    .get-started-btn {
+      width: 100%;
+    }
+  
+    .email-form {
+      padding: 0 10px;
+    }
+  }
+  
